@@ -20,11 +20,11 @@ Rails.application.configure do
       :enable_starttls_auto => true,
       :address => 'smtp.gmail.com',
       :port => 587,
-      # :tls => true,
-      :domain => 'gmail.com', #you can also use google.com
+      :tls => true,
+      :domain => 'gmail.com',
       :authentication => :login,
-      :user_name => 'masterlevelupapp@gmail.com',
-      :password => 'Ziggyz02*'
+      :user_name => ENV["EMAIL"],
+      :password => ENV["PASSWORD"]
     }
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
