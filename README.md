@@ -3,11 +3,13 @@
 ####Version 1.0, 26 October 2015
 By Alexa Zeazas
 
-###Description
+##Description
 This personal goal tracking app uses a gamification approach to allow users to gain experience points and level up their life by completing personal development goals.
 
 _Goals for future updates_
 * _TBD_
+
+##Setup
 
 ###Installation
 1. `git clone <repository-url>` this repository
@@ -26,7 +28,7 @@ _Goals for future updates_
 1. `rails console`
 2. `User.find(<user_id>).update_attribute :admin?, true`
 
-## Technologies Used
+##Technologies Used
 
 Programming Language
 * Ruby
@@ -46,7 +48,7 @@ Test Tools
 * PhantomJS
 * Poltergeist
 
-###Legal
+##Legal
 
 Copyright (c) 2015 Alexa Zeazas
 
