@@ -22,7 +22,7 @@ _Goals for future updates_
 ###Running / Development
 1. `rake db:test:prepare` to create test database
 2. `rails server`
-3. Visit your app at http://localhost:3000 and begin **leveling up your life**!
+3. Visit your app at [http://localhost:3000](http://localhost:3000) and begin **leveling up your life**!
 
 ###Create an Admin
 1. `rails console`
