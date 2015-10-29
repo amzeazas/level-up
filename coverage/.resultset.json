@@ -531,6 +531,21 @@
         1,
         1,
         1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/level-up/app/models/goal.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/level-up/spec/models/goal_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
         null
       ],
       "/Users/Guest/Desktop/level-up/spec/models/user_spec.rb": [
@@ -544,6 +559,6 @@
         null
       ]
     },
-    "timestamp": 1446135379
+    "timestamp": 1446135975
   }
 }
