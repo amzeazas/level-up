@@ -23,13 +23,13 @@ body {
 }
 
 a {
-  color: #FFFF00;
+  color: #F0F000;
   &:visited {
     color: #FFAA00;
   }
   &:hover {
     color: #222222;
-    background-color: #FFFF00;
+    background-color: #F0F000;
   }
 }
 
@@ -77,4 +77,8 @@ a {
     overflow: hidden;
     text-align: center;
     img { width: 100% }
+}
+
+#shared_links {
+  padding: 1px 1px 1px 1px;
 }
