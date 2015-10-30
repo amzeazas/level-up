@@ -1,6 +1,6 @@
 #Level Up
 
-####Version 1.0, 26 October 2015
+####Version 1.1, 30 October 2015
 By Alexa Zeazas
 
 ##Description
@@ -11,6 +11,7 @@ _Goals for future updates_
 * _Add missions CRUD to quests._
 * _Add gamification resources view._
 * _Add leveling functionality._
+* _Add jquery to expand/collapse quests/missions list on quests view._
 
 ##Setup
 
