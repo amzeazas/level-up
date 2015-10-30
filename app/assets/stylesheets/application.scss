@@ -23,13 +23,13 @@ body {
 }
 
 a {
-  color: #F0F000;
+  color: #2BFF00;
   &:visited {
-    color: #FFAA00;
+    color: #00CF22;
   }
   &:hover {
     color: #222222;
-    background-color: #F0F000;
+    background-color: #2BFF00;
   }
 }
 
@@ -46,6 +46,13 @@ a {
     text-align: center;
     margin-bottom: 30px;
   }
+}
+
+#profile {
+  margin: auto;
+  padding: 25px 75px 25px 75px;
+  text-align: center;
+  line-height: 150%;
 }
 
 .navbar-inverse .navbar-brand {
