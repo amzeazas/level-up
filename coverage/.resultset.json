@@ -488,6 +488,9 @@
         1,
         null,
         1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/amzeazas/Documents/Epicodus/projects/level-up/app/models/user.rb": [
@@ -531,6 +534,51 @@
         null,
         null
       ],
+      "/Users/amzeazas/Documents/Epicodus/projects/level-up/app/controllers/quests_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/amzeazas/Documents/Epicodus/projects/level-up/app/controllers/users_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
       "/Users/amzeazas/Documents/Epicodus/projects/level-up/app/models/mission.rb": [
         1,
         1,
@@ -564,6 +612,6 @@
         null
       ]
     },
-    "timestamp": 1446230236
+    "timestamp": 1446239790
   }
 }

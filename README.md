@@ -7,7 +7,10 @@ By Alexa Zeazas
 This personal goal tracking app uses a gamification approach to allow users to gain experience points and level up their life by completing personal development goals.
 
 _Goals for future updates_
-* _TBD_
+* _Fix AJAX bug that doesn't show new quest on quests view._
+* _Add missions CRUD to quests._
+* _Add gamification resources view._
+* _Add leveling functionality._
 
 ##Setup
 

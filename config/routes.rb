@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :home, :only => [ :index ]
   resources :users, :only => [ :index, :show ] do
-    resources :quests, :except => :show
+    resources :quests, :except => [ :show ]
   end
 end
