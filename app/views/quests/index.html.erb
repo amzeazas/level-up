@@ -1,0 +1,14 @@
+<div class="quests-list">
+  <% if @quests.any? %>
+    <% @quests.each do |quest| %>
+    <%= quest.name %>
+      <ul>
+        <% quest.missions.each do |mission| %>
+        <li><%= mission.description %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  <% else %>
+    <%= link_to "Add a Quest", new_user_quest_path(@user), class:"btn btn-success btn-lg" %>
+  <% end %>
+</div>
