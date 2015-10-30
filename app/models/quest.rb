@@ -1,5 +1,5 @@
-class Category < ActiveRecord::Base
+class Quest < ActiveRecord::Base
   validates :name, :presence => true
   belongs_to :user
-  has_many :goals
+  has_many :missions
 end

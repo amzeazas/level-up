@@ -11,20 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030182553) do
+ActiveRecord::Schema.define(version: 20151030183351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "goals", force: :cascade do |t|
+  create_table "missions", force: :cascade do |t|
     t.string   "description",                        null: false
     t.string   "details"
     t.integer  "current_number"
     t.integer  "target_number"
-    t.boolean  "complete?",          default: false
+    t.boolean  "completed?",         default: false
     t.string   "completion_details"
     t.date     "completion_date"
-    t.integer  "category_id"
+    t.integer  "quest_id"
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
   end
