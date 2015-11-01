@@ -1,0 +1,10 @@
+<%= render "layouts/errors", :object => @quest %>
+
+<%= form_for [@quest, @mission], remote: true do |f| %>
+  <div class="form-group">
+    <%= f.label :description, "Mission Description" %>
+    <%= f.text_field :description, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>
