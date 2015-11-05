@@ -8,7 +8,6 @@ class MissionsController < ApplicationController
     @quest = Quest.find(params[:quest_id])
     @mission = @quest.missions.new(mission_params)
     if @mission.save
-      flash[:notice] = "Mission successfully saved"
       respond_to do |format|
         format.html { redirect_to user_quests_path(current_user) }
         format.js

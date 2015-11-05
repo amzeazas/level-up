@@ -18,13 +18,31 @@ class QuestsController < ApplicationController
     @user = User.find(params[:user_id])
     @quest = @user.quests.new(quest_params)
     if @quest.save
-      flash[:notice] = "Quest successfully saved"
       respond_to do |format|
         format.html { redirect_to user_quests_path(@user) }
         format.js
       end
     else
       render :new
+    end
+  end
+
+  def edit
+    @quest = Quest.find(params[:id])
+    @user = @quest.user
+    render :edit
+  end
+
+  def update
+    @quest = Quest.find(params[:id])
+    @user = @quest.user
+    if @quest.update(quest_params)
+      respond_to do |format|
+          format.html { redirect_to quest_path(@quest) }
+        format.js
+      end
+    else
+      render :edit
     end
   end
 
