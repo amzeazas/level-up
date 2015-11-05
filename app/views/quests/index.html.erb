@@ -1,22 +1,16 @@
 <div class="quests">
-  <% if @quests.any? %>
-    <div class="container-fluid">
+  <div class="container-fluid">
+    <% if @quests.any? %>
       <%= link_to "Add a Quest", new_user_quest_path(@user), class:"btn btn-success btn-lg pull-right", id: "new_quest_button", remote: true %>
-    </div>
+    <% else %>
+      <%= link_to "Add a Quest", new_user_quest_path(@user), class: "btn btn-success btn-lg", id: "new_quest_button", remote: true %>
+    <% end %>
+  </div>
+  <div class="container-fluid"
     <ul style="list-style:none", id="user-quests">
       <% @quests.each do |quest| %>
-      <li class="quests-lists"><h3><span class="glyphicon glyphicon-off" aria-hidden="true"></span> <%= quest.name %></h3></li>
-        <ul id="quest-missions">
-          <% quest.missions.each do |mission| %>
-          <li class="missions-list"><%= mission.description %></li>
-          <% end %>
-        </ul>
-        <div class="new-mission">
-          <%= link_to "Add a Mission", new_quest_mission_path(quest), class: "btn btn-primary", id:"new_mission_button", remote: true %>
-        </div>
+        <%= render quest %>
       <% end %>
     </ul>
-  <% else %>
-    <%= link_to "Add a Quest", new_user_quest_path(@user), class: "btn btn-success btn-lg", id: "new_quest_button", remote: true %>
-  <% end %>
+  </div>
 </div>

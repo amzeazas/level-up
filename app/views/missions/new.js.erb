@@ -1,1 +1,1 @@
-$('#new_mission_button').hide().after('<%= j render("form") %>')
+$('#new_mission_button_<%= @quest.id %>').hide().after('<%= j render("form") %>')
