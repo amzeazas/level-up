@@ -1,6 +1,6 @@
 #Level Up
 
-####Version 1.1, 30 October 2015
+####Version 1.2, 5 November 2015
 By Alexa Zeazas
 
 ##Description
@@ -8,9 +8,8 @@ This personal goal tracking app uses a gamification approach to allow users to g
 
 _Goals for future updates_
 * _Add mission completion functionality._
-* _Add gamification resources view._
-* _Add leveling functionality._
 * _Add jquery to expand/collapse quests/missions list on quests view._
+* _Add leveling functionality._
 
 ##Setup
 

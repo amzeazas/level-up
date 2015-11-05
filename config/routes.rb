@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   resources :quests, :only => [ :show ] do
     resources :missions, :except => [ :index ]
   end
+
+  resources :static_pages, :only => [ :index ]
+  get 'resources', :to => 'static_pages#index'
 end
