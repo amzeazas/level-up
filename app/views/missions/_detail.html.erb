@@ -1,0 +1,24 @@
+<li class="quest-missions-list">
+  <h4 id="mission-description-<%= mission.id %>"><%= mission.description %></h4>
+  <h5>
+    <ul class="mission-details">
+      <% if mission.details != nil %>
+        <li>Mission Details: <%= mission.details %></li>
+      <% end %>
+      <% if mission.target_number? != false %>
+        <li>Progress: <%= mission.current_number %> / <%= mission.target_number %></li>
+      <% end %>
+      <li>Completed? - <%= mission.completed? %></li>
+      <% if mission.completed? %>
+        <li>Completed On <%= mission.completion_date.strftime("%d %b. %Y") %></li>
+        <li>Completion Details:<%= mission.completion_details %></li>
+      <% end %>
+    </ul>
+  </h5>
+  <div id="mission-buttons">
+    <%= link_to "Edit Mission", edit_quest_mission_path(@quest, mission), class:"btn btn-default btn-xs", id:"edit_mission_link_#{mission.id}", remote: true %>
+    <%= link_to "Delete Mission", quest_mission_path(@quest, mission), class:"btn btn-danger btn-xs",
+                                  :data => {:confirm => "Are you sure you want to delete this mission?",
+                                            :method => "delete"}%>
+  </div>
+</li>
