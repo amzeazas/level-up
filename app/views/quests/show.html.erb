@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <%= link_to "Edit Quest", edit_user_quest_path(@user, @quest), class:"btn btn-default pull-right" %>
+  <h1><%= @quest.name %></h1>
+  <h4>
+    <ul class="missions-list">
+      <% @quest.missions.each do |mission| %>
+        <li><%= mission.description %></li>
+      <% end %>
+    </ul>
+  </h4>
+</div>

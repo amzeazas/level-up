@@ -2,11 +2,11 @@
   <h1>Welcome to Level Up!!</h1>
   <hr>
   <h4>Have you ever wished your life was as amazing as that of your favorite superhero or video game character? Well Level Up is here to help you transform your life into an adventure, starring YOU as the hero!<br><br><b>ARE YOU READY?</b></h4>
-  <div class="text-center">
-    <% if user_signed_in? %>
-        <%= link_to "Your Dashboard", user_path(current_user), class: "btn btn-primary btn-lg" %>
-    <% else %>
-      <%= link_to "Press START...", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-    <% end %>
-  </div>
+</div>
+<div class="text-center", id="home-buttons">
+  <% if user_signed_in? %>
+    <%= link_to "Your Dashboard", user_path(current_user), class: "btn btn-primary btn-lg" %>
+  <% else %>
+    <%= link_to "Press START...", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+  <% end %>
 </div>

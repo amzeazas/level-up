@@ -4,10 +4,14 @@ class QuestsController < ApplicationController
     @quests = @user.quests
   end
 
+  def show
+    @quest = Quest.find(params[:id])
+    @user = @quest.user
+  end
+
   def new
     @user = User.find(params[:user_id])
     @quest = @user.quests.new
-    render :new
   end
 
   def create

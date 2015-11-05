@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :quests, :except => [ :show ]
   end
 
-  resources :quests, :except => [ :show ] do
+  resources :quests do
     resources :missions, :except => [ :index ]
   end
 end

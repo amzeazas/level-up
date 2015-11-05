@@ -24,9 +24,6 @@ body {
 
 a {
   color: #2BFF00;
-  &:visited {
-    color: #00CF22;
-  }
   &:hover {
     color: #222222;
     background-color: #2BFF00;
@@ -35,7 +32,7 @@ a {
 
 .home {
   margin: auto;
-  padding: 25px 75px 75px 75px;
+  padding: 25px 75px 10px 75px;
   & h1 {
     color: #3B8DD4;
     text-align: center;
@@ -48,15 +45,24 @@ a {
   }
 }
 
+#home-buttons {
+  margin: auto;
+}
+
 .quests {
   margin: auto;
   padding: 25px 75px 25px 75px;
   line-height: 150%;
 }
 
+span.glyphicon {
+  vertical-align: middle;
+  margin-bottom: 13px;
+}
+
 .new-mission {
   margin: auto;
-  padding: 25px 75px 25px 75px;
+  padding: 10px 75px 10px 75px;
   line-height: 150%;
 }
 
@@ -70,6 +76,36 @@ a {
   padding: 25px 75px 25px 75px;
   text-align: center;
   line-height: 150%;
+}
+
+.round-image-250 {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 75px;
+    -moz-border-radius: 75px;
+    -webkit-border-radius: 75px;
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+}
+
+.round-image-50 {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+}
+
+#shared_links {
+  padding: 1px 1px 1px 1px;
 }
 
 .navbar-inverse .navbar-brand {
@@ -108,6 +144,38 @@ a {
   background-color: #00AB1C;
   border-color: #398439;
 }
+.btn-primary {
+  color: #FFF;
+  background-color: #3B8DD4;
+  border-color: #2e6da4;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #FFF;
+  background-color: #2F70A9;
+  border-color: #122B40;
+}
+.btn-primary:hover {
+  color: #FFF;
+  background-color: #2F70A9;
+  border-color: #204D74;
+}
+.btn-default {
+  color: #222222;
+  background-color: #D4D4D4;
+  border-color: #CCC;
+}
+.btn-default:focus,
+.btn-default.focus {
+  color: #222222;
+  background-color: #949494;
+  border-color: #8C8C8C;
+}
+.btn-default:hover {
+  color: #222222;
+  background-color: #949494;
+  border-color: #7F7F7F;
+}
 
 .progress-bar-success {
   background-color: #00CF22;
@@ -116,34 +184,4 @@ a {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
   background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
   background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
-}
-
-.round-image-250 {
-    background-color: white;
-    border: 1px solid #d9d9d9;
-    border-radius: 75px;
-    -moz-border-radius: 75px;
-    -webkit-border-radius: 75px;
-    height: 250px;
-    width: 250px;
-    overflow: hidden;
-    text-align: center;
-    img { width: 100% }
-}
-
-.round-image-50 {
-    background-color: white;
-    border: 1px solid #d9d9d9;
-    border-radius: 25px;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    height: 50px;
-    width: 50px;
-    overflow: hidden;
-    text-align: center;
-    img { width: 100% }
-}
-
-#shared_links {
-  padding: 1px 1px 1px 1px;
 }
