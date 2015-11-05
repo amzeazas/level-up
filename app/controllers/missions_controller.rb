@@ -17,6 +17,26 @@ class MissionsController < ApplicationController
     end
   end
 
+  def edit
+    @mission = Mission.find(params[:id])
+    @quest = @mission.quest
+    @user = @quest.user
+  end
+
+  def update
+    @mission = Mission.find(params[:id])
+    @quest = @mission.quest
+    @user = @quest.user
+    if @mission.update(mission_params)
+      respond_to do |format|
+          format.html { redirect_to quest_path(@quest) }
+        format.js
+      end
+    else
+      render :edit
+    end
+  end
+
   private
 
   def mission_params
