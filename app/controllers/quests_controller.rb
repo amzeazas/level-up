@@ -1,7 +1,7 @@
 class QuestsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @quests = @user.quests
+    @quests = @user.quests.order(name: :asc)
   end
 
   def show
@@ -44,6 +44,16 @@ class QuestsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @quest = Quest.find(params[:id])
+    @user = @quest.user
+    @quest.missions.each do |mission|
+      mission.destroy
+    end
+    @quest.destroy
+    redirect_to user_quests_path(@user)
   end
 
   private

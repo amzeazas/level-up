@@ -5,7 +5,7 @@
   </h3>
 </li>
 <ul id="quest-missions-<%= quest.id %>">
-  <% quest.missions.each do |mission| %>
+  <% quest.missions.order(description: :asc).each do |mission| %>
     <%= render "missions/mission", mission:mission %>
   <% end %>
 </ul>
