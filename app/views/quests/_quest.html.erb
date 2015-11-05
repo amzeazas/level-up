@@ -1,7 +1,7 @@
 <li class="quests-lists">
   <h3>
     <span class="glyphicon glyphicon-off" aria-hidden="true" style="color:#2BFF00"></span>
-    <%= link_to quest.name, quest_path(quest) %>
+    <%= link_to quest.name, user_quest_path(@user, quest) %>
   </h3>
 </li>
 <ul id="quest-missions-<%= quest.id %>">

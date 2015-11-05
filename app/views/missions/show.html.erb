@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <h1><%= @mission.description %></h1>
+  <h4>
+    <ul>
+      <li>Mission Details: <%= @mission.details %></li>
+      <%= if @mission.target_number != nil %>
+        <li>Progress: <%= @mission.current_number %> / <%= @mission.target_number %></li>
+      <%= end %>
+      <li>Completed? - <%= @mission.completed? %></li>
+      <% if @mission.completed? %>
+        <li>Completed On <%= @mission.completion_date.strftime("%d %b. %Y") %></li>
+        <li>Completion Details:<%= @mission.completion_details %></li>
+      <% end %>
+    </ul>
+  </h4>
+</div>

@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   resources :home, :only => [ :index ]
 
   resources :users, :only => [ :index, :show ] do
-    resources :quests, :except => [ :show ]
+    resources :quests
   end
 
-  resources :quests do
+  resources :quests, :only => [ :show ] do
     resources :missions, :except => [ :index ]
   end
 end
