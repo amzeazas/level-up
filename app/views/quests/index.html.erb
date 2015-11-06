@@ -1,10 +1,14 @@
 <div class="quests">
+  <div class="container-fluid", id="profile">
+    <%= image_tag @user.avatar.url(:medium), class:"round-image-100" %>
+    <h1>
+      <b><%= @user.username %></b>
+    </h1>
+    <h3>Current Level:</h3>
+  </div>
+  <hr>
   <div class="container-fluid">
-    <% if @quests.any? %>
-      <%= link_to "Add a Quest", new_user_quest_path(@user), class:"btn btn-success btn-lg pull-right", id: "new_quest_button", remote: true %>
-    <% else %>
-      <%= link_to "Add a Quest", new_user_quest_path(@user), class: "btn btn-success btn-lg", id: "new_quest_button", remote: true %>
-    <% end %>
+    <%= link_to "Add a Quest", new_user_quest_path(@user), class:"btn btn-success btn-lg pull-right", id: "new_quest_button", remote: true %>
     <span class="new-quest-form"></span>
   </div>
   <div class="container-fluid"
