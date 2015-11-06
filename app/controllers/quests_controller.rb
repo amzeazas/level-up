@@ -1,7 +1,7 @@
 class QuestsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @quests = @user.quests.order(name: :asc)
+    @quests = @user.quests.order(title: :asc)
   end
 
   def show
@@ -59,6 +59,6 @@ class QuestsController < ApplicationController
   private
 
   def quest_params
-    params.require(:quest).permit(:name)
+    params.require(:quest).permit(:title)
   end
 end
