@@ -9,10 +9,10 @@
   <hr>
   <div class="container-fluid">
     <%= link_to "Add a Quest", new_user_quest_path(@user), class:"btn btn-success btn-lg pull-right", id: "new_quest_button", remote: true %>
-    <span class="new-quest-form"></span>
+    <span class="new_quest_form"></span>
   </div>
   <div class="container-fluid"
-    <ul style="list-style:none", id="user-quests">
+    <ul style="list-style:none", id="user_quests">
       <% @quests.each do |quest| %>
         <%= render quest %>
       <% end %>

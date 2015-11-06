@@ -1,8 +1,8 @@
-<li class="quest-missions-list">
-  <h4 id="mission-description-<%= mission.id %>"><%= mission.description %></h4>
+<li class="quest_missions_list">
+  <h4 id="mission_description_<%= mission.id %>"><%= mission.description %></h4>
   <h5>
-    <ul class="mission-details">
-      <% if mission.details != nil %>
+    <ul class="mission_details">
+      <% if mission.details != "" %>
         <li><u>Mission Details:</u> <%= mission.details %></li>
       <% end %>
       <% if mission.target_number != nil %>
@@ -15,7 +15,7 @@
       <% end %>
     </ul>
   </h5>
-  <div id="mission-buttons">
+  <div id="mission_buttons">
     <%= link_to "Edit Mission", edit_quest_mission_path(@quest, mission), class:"btn btn-default btn-xs", id:"edit_mission_link_#{mission.id}", remote: true %>
     <%= link_to "Delete Mission", quest_mission_path(@quest, mission), class:"btn btn-danger btn-xs",
                                   :data => {:confirm => "Are you sure you want to delete this mission?",

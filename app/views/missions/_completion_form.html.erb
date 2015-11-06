@@ -1,0 +1,16 @@
+<%= form_for [@quest, @mission], remote: true do |f| %>
+  <div class="form-group">
+    <%= f.label :completion_details, "Completion Details" %>
+    <%= f.text_area :completion_details, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :current_number, 'Current Progress (leave blank if not applicable)' %>
+    <%= f.number_field :current_number, class: "form-control", placeholder: "e.g. 12 if visited 12/50 states" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :target_number, 'Mission Target Number (leave blank if not applicable)' %>
+    <%= f.number_field :target_number, class: "form-control", placeholder: 'e.g. 50 for "visit all US states"' %>
+  </div>
+
+  <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>

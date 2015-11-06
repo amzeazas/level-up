@@ -1,3 +1,8 @@
 $('form').remove();
 $('#edit_mission_link_<%= @mission.id %>').show();
-$('#mission-description-<%= @mission.id %>').html("<%= @mission.description %>");
+$('#mission_description_<%= @mission.id %>').html("<%= @mission.description %>");
+<% if @mission.complete? %>
+  $('#edit_mission_<%= @mission.id %>').appendTo('#complete_missions');
+<% else %>
+  $('#edit_mission_<%= @mission.id %>').appendTo('#incomplete_missions');
+<% end %>

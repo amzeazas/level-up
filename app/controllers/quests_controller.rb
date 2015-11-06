@@ -38,7 +38,7 @@ class QuestsController < ApplicationController
     @user = @quest.user
     if @quest.update(quest_params)
       respond_to do |format|
-          format.html { redirect_to quest_path(@quest) }
+        format.html { redirect_to quest_path(@quest) }
         format.js
       end
     else

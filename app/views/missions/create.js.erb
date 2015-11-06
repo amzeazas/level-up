@@ -1,4 +1,5 @@
 $('form').remove();
-$('#new-mission-form-<%= @quest.id %>').empty();
+$('#new_mission_form_<%= @quest.id %>').empty();
 $('#new_mission_button_<%= @quest.id %>').show();
-$('#quest-missions-<%= @quest.id %>').append('<%= j render(@mission) %>');
+$('#quest_missions_<%= @quest.id %>').append('<%= j render(@mission) %>');
+$('#edit_mission_<%= @mission.id %>').submitOnCheck();

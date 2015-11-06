@@ -6,10 +6,11 @@ class MissionsController < ApplicationController
 
   def create
     @quest = Quest.find(params[:quest_id])
+    @user = @quest.user
     @mission = @quest.missions.new(mission_params)
     if @mission.save
       respond_to do |format|
-        format.html { redirect_to user_quests_path(current_user) }
+        format.html { redirect_to user_quests_path(@user) }
         format.js
       end
     else
@@ -29,7 +30,7 @@ class MissionsController < ApplicationController
     @user = @quest.user
     if @mission.update(mission_params)
       respond_to do |format|
-          format.html { redirect_to quest_path(@quest) }
+        format.html { redirect_to quest_path(@quest) }
         format.js
       end
     else
@@ -48,6 +49,6 @@ class MissionsController < ApplicationController
   private
 
   def mission_params
-    params.require(:mission).permit(:description, :details, :target_number, :current_number)
+    params.require(:mission).permit(:description, :details, :target_number, :current_number, :completion_details)
   end
 end

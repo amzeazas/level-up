@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :quests, :only => [ :show ] do
-    resources :missions, :except => [ :index ]
+    resources :missions
   end
 
   resources :static_pages, :only => [ :index ]

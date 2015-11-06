@@ -1,15 +1,15 @@
-<li class="quests-lists">
+<li class="quests_lists">
   <h3>
     <span class="glyphicon glyphicon-off" aria-hidden="true" style="color:#2BFF00"></span>
     <%= link_to quest.title, user_quest_path(@user, quest) %>
   </h3>
 </li>
-<ul id="quest-missions-<%= quest.id %>">
-  <% quest.missions.order(description: :asc).each do |mission| %>
-    <%= render "missions/mission", mission:mission %>
+<ul id="quest_missions_<%= quest.id %>">
+  <% quest.missions.where(completed?: false).order(description: :asc).each do |mission| %>
+    <li><%= mission.description %></li>
   <% end %>
 </ul>
-<div class="new-mission">
+<div class="new_mission">
   <%= link_to "Add a Mission", new_quest_mission_path(quest), class: "btn btn-primary", id:"new_mission_button_#{quest.id}", remote: true %>
-  <span id="new-mission-form-<%= quest.id %>"></span>
+  <span id="new_mission_form_<%= quest.id %>"></span>
 </div>
