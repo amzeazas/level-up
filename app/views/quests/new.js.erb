@@ -1,1 +1,3 @@
-$('#new_quest_button').hide().after('<%= j render("form") %>')
+$('#new_quest_button').hide();
+$('.new-quest-form').empty();
+$('.new-quest-form').append('<%= j render("form") %>');

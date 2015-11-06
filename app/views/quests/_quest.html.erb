@@ -11,4 +11,5 @@
 </ul>
 <div class="new-mission">
   <%= link_to "Add a Mission", new_quest_mission_path(quest), class: "btn btn-primary", id:"new_mission_button_#{quest.id}", remote: true %>
+  <span id="new-mission-form-<%= quest.id %>"></span>
 </div>
