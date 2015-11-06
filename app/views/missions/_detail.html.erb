@@ -3,15 +3,15 @@
   <h5>
     <ul class="mission-details">
       <% if mission.details != nil %>
-        <li>Mission Details: <%= mission.details %></li>
+        <li><u>Mission Details:</u> <%= mission.details %></li>
       <% end %>
-      <% if mission.target_number? != false %>
-        <li>Progress: <%= mission.current_number %> / <%= mission.target_number %></li>
+      <% if mission.target_number != nil %>
+        <li><u>Progress:</u> <%= mission.current_number %> / <%= mission.target_number %></li>
       <% end %>
-      <li>Completed? - <%= mission.completed? %></li>
+      <li><u>Completed?</u> - <%= mission.completed? %></li>
       <% if mission.completed? %>
         <li>Completed On <%= mission.completion_date.strftime("%d %b. %Y") %></li>
-        <li>Completion Details:<%= mission.completion_details %></li>
+        <li><u>Completion Details:</u> <%= mission.completion_details %></li>
       <% end %>
     </ul>
   </h5>

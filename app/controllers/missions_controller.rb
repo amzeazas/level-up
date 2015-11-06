@@ -48,6 +48,6 @@ class MissionsController < ApplicationController
   private
 
   def mission_params
-    params.require(:mission).permit(:description)
+    params.require(:mission).permit(:description, :details, :target_number, :current_number)
   end
 end
